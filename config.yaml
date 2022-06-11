@@ -1,0 +1,55 @@
+## Every n epochs LSTM will update its weights
+n_every_epoch_calc_lstm: 60
+## How many epochs we consider for one time series
+look_back: 40
+## how many epochs we consider for TRAINING during LSTM learning
+## for example for epoch 390 LSTM will be taught on [260:360] epochs
+how_much_train: 50
+## how many epochs we consider for VALIDATION during LSTM learning
+## for example for epoch 390 LSTM will be validated on [330:360] epochs
+val_boards: 10
+## how many epochs we consider at a time
+predict_count: 20
+## max possible difference between Train loss and Valid loss
+eps: 0.02
+## do we train the model or use checkpoint?
+#flag_train: True
+flag_train: False
+# do we plot?
+#flag_plot: False
+flag_plot: True
+## do we predict overtraining?
+#flag_analyze: False
+flag_analyze: True
+## after what epoch we want to draw
+epoch_to_plot: 50
+## what is our drawing interval (for epoch "epoch_to_plot" we draw two lines: [epoch_to_plot-how_much_epochs_to_plot:epoch_to_plot] - real data, [epoch_to_plot:epoch_to_plot+how_much_epochs_to_plot] - predicted data)
+## so for 150 and 50 it will be [100:150] - real data, [150:200] - predicted
+how_much_epochs_to_plot: 50
+## for time series to smooth the data
+smooth_window: 10
+## source of Train and Valid losses
+file_name: 'data/log_train_newx.txt'
+## what is domain area
+model: 'ocr'
+## this patience and early stopping patience should be the same
+patience: 20
+## we can predict only earlystopping or predict earlystopping and overfitting/underfitting
+flag_predict_only_earlystopping: True
+
+
+## Parameters for NER
+#n_every_epoch_calc_lstm = 50
+#look_back = 48
+#how_much_train = 30
+#val_boards = 20
+#predict_count = 30
+#eps = 0.02
+#flag_train: True
+#flag_plot: True
+#flag_analyze: False
+#epoch_to_plot: 150
+#how_much_epochs_to_plot: 50
+#smooth_window: 5
+#file_name: 'data/ner_log_1000.txt'
+#model: 'ner'

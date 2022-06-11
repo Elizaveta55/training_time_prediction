@@ -1,0 +1,23 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.*env
+.python-version
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.bak
+
+# Ignore dynaconf secret files
+.secrets.*
+
+# dataset
+dataset/output
+dataset/output_json
+dataset/cache
+dataset/processing.gitattributes.gitattributes
